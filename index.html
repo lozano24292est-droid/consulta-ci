@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Consulta de Recinto y Horario | DDEP Cobija – Pando</title>
+<meta name="description" content="Consulte su recinto y horario asignado ingresando su número de C.I. Dirección Departamental de Educación de Pando.">
+<meta name="theme-color" content="#0b2a8a">
+<link rel="icon" href="img/favicon.png">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header class="top">
+  <div class="top__in">
+    <img src="img/logo.png" alt="Logo de la Dirección Departamental de Educación de Pando" class="top__logo">
+    <div class="top__txt">
+      <span class="top__org">Dirección Departamental de Educación</span>
+      <span class="top__sub">Cobija – Pando</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <h1>Consulta de asignación</h1>
+    <p>Ingrese su número de cédula de identidad para conocer su <strong>recinto</strong> y <strong>horario</strong>.</p>
+  </section>
+
+  <form id="form" class="card search" autocomplete="off" novalidate>
+    <label for="ci">Número de C.I.</label>
+    <div class="search__row">
+      <input id="ci" name="ci" type="text" inputmode="numeric" placeholder="Ej: 1234567" maxlength="14" autofocus aria-describedby="hint">
+      <button type="submit">Consultar</button>
+    </div>
+    <p id="hint" class="hint">Si su C.I. tiene complemento, escríbalo junto al número (Ej: 1234567-1A).</p>
+  </form>
+
+  <section id="result" aria-live="polite"></section>
+</main>
+
+<footer class="foot">
+  <p>© <span id="year"></span> Dirección Departamental de Educación – Cobija, Pando</p>
+  <p class="foot__small">Si sus datos no aparecen o son incorrectos, comuníquese con la DDEP.</p>
+</footer>
+
+<script src="data/asignaciones.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
